@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --card-bg: rgba(128, 128, 128, 0.402);
+  --card-bd: rgba(255, 255, 255, 0.317);
+}
+
+body {
+  background-color: rgb(20, 20, 31);
+  color: black;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20vh 1fr;
+}
+
+.header {
+  margin: 25px;
+  display: grid;
+}
+
+.title {
+  text-align: center;
+  color: aliceblue;
+}
+
+.modes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  justify-content: center;
+  padding: 10px;
+  background-color: var(--card-bg);
+  border-radius: 15px;
+}
+
+button.mode {
+  border-radius: 15px;
+  border: none;
+  background-color: aqua;
+  transition: 0.2s;
+}
+
+button.mode:hover {
+  transform: scale(101%);
+}
+
+button.active {
+  background-color: rgb(25, 25, 201);
+}
+
+.content {
+  margin: 25px;
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: 1fr 60vw 1fr;
+  align-items: center;
+  gap: 10px;
+}
+
+.content div {
+  border: 2px solid var(--card-bd);
+  background-color: var(--card-bg);
+  border-radius: 15px;
+}
+
+.p1,
+.p2 {
+  height: 100px;
+  text-align: center;
+}
+
+.game {
+  text-align: center;
+  aspect-ratio: 1;
+  min-height: 400px;
+  max-height: 500px;
+}
