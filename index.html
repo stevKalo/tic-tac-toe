@@ -5,37 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </head>
   <div class="container">
     <div class="header">
       <h1 class="title">Tic-Tac-Toe</h1>
-      <div class="modes">
+      <button class="newGame">New Game</button>
+      <!-- <div class="modes">
         <button class="mode 2v2 active">2v2</button>
         <button class="mode easy">Easy</button>
         <button class="mode medium">Medium</button>
         <button class="mode hard">Hard</button>
-      </div>
+      </div> -->
     </div>
     <div class="content">
       <div class="p1">
-        <h2 class="name">Player 1</h2>
-        <p class="score">0</p>
+        <h2 class="name" id="p1-name">Player 1</h2>
+        <p class="score" id="p1-score">0</p>
       </div>
-      <div class="game">
-        <div class="tile" id="tile-1">X</div>
-        <div class="tile" id="tile-2">O</div>
-        <div class="tile" id="tile-3">X</div>
-        <div class="tile" id="tile-4">O</div>
-        <div class="tile" id="tile-5">X</div>
-        <div class="tile" id="tile-6">O</div>
-        <div class="tile" id="tile-7">X</div>
-        <div class="tile" id="tile-8">O</div>
-        <div class="tile" id="tile-9">X</div>
+      <div class="game" id="game">
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
       </div>
       <div class="p2">
-        <h2 class="name">Player 2</h2>
-        <p class="score">0</p>
+        <h2 class="name" id="p2-name">Player 2</h2>
+        <p class="score" id="p2-score">0</p>
       </div>
     </div>
   </div>
