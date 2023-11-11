@@ -40,7 +40,8 @@ function createBoard() {
     // add functionality to tiles
     newTile.addEventListener("mousedown", () => {
       if (newTile.textContent == "") {
-        newTile.textContent = playerArr[0].role;
+        newObj.value = playerArr[0].role;
+        newTile.textContent = newObj.value;
         checkGame();
         playerArr.reverse();
       }
@@ -50,7 +51,43 @@ function createBoard() {
   }
 }
 
-function checkGame() {}
+function checkGame() {
+  // check condition function
+  function checkCondition(a, b, c) {
+    return a.value !== "" && a.value == b.value && b.value == c.value;
+  }
+
+  function checkForWin() {
+    // check rows
+    for (let i = 0; i < 9; i += 3) {
+      if (checkCondition(tileArr[i], tileArr[i + 1], tileArr[i + 2])) {
+        console.log("3 across");
+        return true;
+      }
+
+      // check columns
+      for (let i = 0; i < 3; i++) {
+        if (checkCondition(tileArr[i], tileArr[i + 3], tileArr[i + 6])) {
+          console.log("3 down");
+          return true;
+        }
+      }
+      // check diagnals
+      if (
+        checkCondition(tileArr[0], tileArr[4], tileArr[8]) ||
+        checkCondition(tileArr[2], tileArr[4], tileArr[6])
+      ) {
+        console.log("3 diagnal");
+        return true;
+      }
+    }
+    // else return false
+    return false;
+  }
+  const isWin = checkForWin();
+  return isWin;
+}
+
 // clears board
 function clearBoard() {
   tileArr = [];
