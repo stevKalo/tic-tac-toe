@@ -15,8 +15,9 @@ let playerArr = [];
 function createPlayers() {
   for (let i = 1; i < 3; i++) {
     const player = {
-      name: "player" + i,
+      name: "player " + i,
       role: i == 1 ? "X" : "O",
+      score: 0,
       nameDisplay: document.querySelector(`#p${i}-name`),
       scoreDisplay: document.querySelector(`#p${i}-score`),
     };
@@ -84,8 +85,17 @@ function checkGame() {
     // else return false
     return false;
   }
+  // update score function
+  function updateScore(player) {
+    player.scoreDisplay.textContent = player.score;
+  }
+
   const isWin = checkForWin();
-  return isWin;
+  if (isWin) {
+    ++playerArr[0].score;
+    updateScore(playerArr[0]);
+    alert(`${playerArr[0].name} wins!`);
+  }
 }
 
 // clears board
@@ -96,7 +106,7 @@ function clearBoard() {
   }
 }
 
-// make players on window load
+// window load event
 window.onload = () => {
   clearBoard();
   createPlayers();

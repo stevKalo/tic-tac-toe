@@ -4,15 +4,21 @@
 }
 
 :root {
+  --primary: #141f25;
+  --secondary: #4d4d4e;
+  --accent: #6ca1a7;
+  --primary-bg: #cdd7d0;
+  --secondary-bg: #daded4;
   --card-bg: rgba(128, 128, 128, 0.402);
   --card-bd: rgba(255, 255, 255, 0.317);
 }
 
 body {
-  background-color: rgb(20, 20, 31);
+  background-color: var(--primary);
   color: black;
   height: 100vh;
   overflow: hidden;
+  position: relative;
 }
 
 .container {
@@ -28,7 +34,7 @@ body {
 
 .title {
   text-align: center;
-  color: aliceblue;
+  color: var(--accent);
 }
 
 .modes {
@@ -37,23 +43,8 @@ body {
   gap: 10px;
   justify-content: center;
   padding: 10px;
-  background-color: var(--card-bg);
+  background-color: var(--secondary);
   border-radius: 15px;
-}
-
-button.mode {
-  border-radius: 15px;
-  border: none;
-  background-color: aqua;
-  transition: 0.2s;
-}
-
-button.mode:hover {
-  transform: scale(101%);
-}
-
-button.active {
-  background-color: rgb(25, 25, 201);
 }
 
 .content {
@@ -66,8 +57,8 @@ button.active {
 }
 
 .content > div {
-  border: 2px solid var(--card-bd);
-  background-color: var(--card-bg);
+  border: 2px solid var(--primary-bg);
+  background-color: var(--secondary);
   border-radius: 15px;
 }
 
@@ -93,7 +84,7 @@ button.active {
 }
 
 .tile {
-  background-color: rgba(240, 248, 255, 0.169);
+  background-color: var(--primary-bg);
   border-radius: 5px;
   border: none;
   justify-items: center;
@@ -101,9 +92,22 @@ button.active {
   place-items: center;
   font-size: 50px;
   transition: 0.2s;
+  opacity: 0.5;
 }
 
 .tile:hover {
-  background-color: rgba(240, 248, 255, 0.532);
+  opacity: 1;
   transform: scale(101%);
+}
+
+.modal {
+  position: absolute;
+  top: 50;
+  left: 50;
+  width: 20vw;
+  height: 20vh;
+  padding: 20px;
+}
+
+.modal-container {
 }

@@ -7,39 +7,47 @@
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
-  <div class="container">
-    <div class="header">
-      <h1 class="title">Tic-Tac-Toe</h1>
-      <button class="newGame">New Game</button>
-      <!-- <div class="modes">
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1 class="title">Tic-Tac-Toe</h1>
+        <button class="newGame">New Game</button>
+        <!-- <div class="modes">
         <button class="mode 2v2 active">2v2</button>
         <button class="mode easy">Easy</button>
         <button class="mode medium">Medium</button>
         <button class="mode hard">Hard</button>
       </div> -->
+      </div>
+      <div class="content">
+        <div class="p1">
+          <h2 class="name" id="p1-name">Player 1</h2>
+          <p class="score" id="p1-score">0</p>
+        </div>
+        <div class="game" id="game">
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+        </div>
+        <div class="p2">
+          <h2 class="name" id="p2-name">Player 2</h2>
+          <p class="score" id="p2-score">0</p>
+        </div>
+      </div>
     </div>
-    <div class="content">
-      <div class="p1">
-        <h2 class="name" id="p1-name">Player 1</h2>
-        <p class="score" id="p1-score">0</p>
+    <!-- <dialog class="modal" open>
+      <div class="modal-container">
+        <div class="player-card">
+          <input type="text" id="p1-name-modal" />
+          <input type="text" id="p2-name-modal" />
+        </div>
       </div>
-      <div class="game" id="game">
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-      </div>
-      <div class="p2">
-        <h2 class="name" id="p2-name">Player 2</h2>
-        <p class="score" id="p2-score">0</p>
-      </div>
-    </div>
-  </div>
-
-  <body></body>
+    </dialog> -->
+  </body>
 </html>
